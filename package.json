@@ -1,0 +1,40 @@
+{
+  "name": "hpcc-js-dashboard",
+  "version": "0.0.0",
+  "description": "Dashboard Editor",
+  "dependencies": {
+    "@phosphor/commands": "^1.2.0",
+    "@phosphor/dragdrop": "^1.1.0",
+    "@phosphor/messaging": "^1.2.0",
+    "@phosphor/widgets": "^1.2.0",
+    "codemirror": "^5.25.2",
+    "es6-promise": "^4.1.0",
+    "tslib": "^1.7.1"
+  },
+  "devDependencies": {
+    "css-loader": "^0.28.1",
+    "copyfiles": "^1.2.0",
+    "rimraf": "^2.6.1",
+    "source-map-loader": "^0.2.1",
+    "style-loader": "^0.17.0",
+    "typescript": "^2.3.2",
+    "webpack": "^2.5.1",
+    "webpack-dev-server": "^2.4.5"
+  },
+  "scripts": {
+    "clean": "rimraf build",
+    "copy": "copyfiles -u 3 src/hpcc-js-viz/src/**/*.css build/hpcc-js-viz/src/",
+    "build": "tsc && npm run copy && webpack",
+    "serve": "npm run build && webpack-dev-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/GordonSmith/hpcc-js-dashboard.git"
+  },
+  "author": "",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/GordonSmith/hpcc-js-dashboard/issues"
+  },
+  "homepage": "https://github.com/GordonSmith/hpcc-js-dashboard#readme"
+}
